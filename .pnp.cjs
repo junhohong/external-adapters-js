@@ -24,6 +24,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/composites/apy-finance"\
       },\
       {\
+        "name": "@chainlink/apy-finance-test-adapter",\
+        "reference": "workspace:packages/composites/apy-finance-test"\
+      },\
+      {\
         "name": "@chainlink/augur-adapter",\
         "reference": "workspace:packages/composites/augur"\
       },\
@@ -828,6 +832,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@chainlink/anyblock-adapter", ["workspace:packages/sources/anyblock"]],\
       ["@chainlink/ap-election-adapter", ["workspace:packages/sources/ap-election"]],\
       ["@chainlink/apy-finance-adapter", ["workspace:packages/composites/apy-finance"]],\
+      ["@chainlink/apy-finance-test-adapter", ["workspace:packages/composites/apy-finance-test"]],\
       ["@chainlink/armanino-adapter", ["workspace:packages/sources/armanino"]],\
       ["@chainlink/augur-adapter", ["workspace:packages/composites/augur"]],\
       ["@chainlink/avalanche-platform-adapter", ["workspace:packages/sources/avalanche-platform"]],\
@@ -5694,6 +5699,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
+      ["@chainlink/apy-finance-test-adapter", [\
+        ["workspace:packages/composites/apy-finance-test", {\
+          "packageLocation": "./packages/composites/apy-finance-test/",\
+          "packageDependencies": [\
+            ["@chainlink/apy-finance-test-adapter", "workspace:packages/composites/apy-finance-test"],\
+            ["@chainlink/external-adapter-framework", "npm:0.29.13"],\
+            ["@chainlink/token-allocation-adapter", "workspace:packages/non-deployable/token-allocation"],\
+            ["@types/jest", "npm:27.5.2"],\
+            ["@types/node", "npm:16.11.51"],\
+            ["@types/supertest", "npm:2.0.12"],\
+            ["axios", "npm:1.3.4"],\
+            ["ethers", "npm:5.4.7"],\
+            ["nock", "npm:13.2.9"],\
+            ["supertest", "npm:6.2.4"],\
+            ["tslib", "npm:2.4.1"],\
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@chainlink/armanino-adapter", [\
         ["workspace:packages/sources/armanino", {\
           "packageLocation": "./packages/sources/armanino/",\
@@ -7170,6 +7195,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@chainlink-external-adapter-framework-npm-0.29.12-c1b878459a-e2a3caba27.zip/node_modules/@chainlink/external-adapter-framework/",\
           "packageDependencies": [\
             ["@chainlink/external-adapter-framework", "npm:0.29.12"],\
+            ["ajv", "npm:8.11.0"],\
+            ["axios", "npm:1.3.4"],\
+            ["eventsource", "npm:2.0.2"],\
+            ["fastify", "npm:4.13.0"],\
+            ["ioredis", "npm:5.2.3"],\
+            ["mock-socket", "npm:9.1.5"],\
+            ["pino", "npm:8.6.1"],\
+            ["pino-pretty", "npm:9.1.0"],\
+            ["prom-client", "npm:13.2.0"],\
+            ["ws", "virtual:c1b878459a805a1e4e3c13bafbad9f455044a7261cda8e5f570db23acf069cb5906ba73e0607660fb7735fd2dde66d0e8d5428a46912ce561520a24da7f707a7#npm:8.9.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.29.13", {\
+          "packageLocation": "./.yarn/cache/@chainlink-external-adapter-framework-npm-0.29.13-bf4c953d02-b12c1a4d77.zip/node_modules/@chainlink/external-adapter-framework/",\
+          "packageDependencies": [\
+            ["@chainlink/external-adapter-framework", "npm:0.29.13"],\
             ["ajv", "npm:8.11.0"],\
             ["axios", "npm:1.3.4"],\
             ["eventsource", "npm:2.0.2"],\
